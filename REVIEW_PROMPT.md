@@ -11,6 +11,7 @@ Please read:
 5. `docs/profit-model-v1.md`
 6. `docs/keyword-serp-validation-no-knife-tsa-edc.md`
 7. `docs/hermes-review-and-v5-additions.md`
+8. `docs/further-research-recommendations-2026-06-20.md`
 
 ## Product Context
 

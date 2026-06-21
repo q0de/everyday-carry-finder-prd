@@ -218,6 +218,12 @@ The Carry Builder quiz should be a later conversion layer, not a launch dependen
 
 See `docs/hermes-review-and-v5-additions.md` for build gates, launch sitemap draft, analytics event spec, compliance blocks, and 30-day/120-day criteria.
 
+Further research in `docs/further-research-recommendations-2026-06-20.md` adds three refinements:
+
+- prioritize TSA/no-knife pages first because they have the clearest SERP gap;
+- treat the keychain page as conditional until keyword validation proves a winnable angle;
+- add direct affiliate targets such as Bellroy, Lever Gear, Olight, Huckberry, and CountyComm before relying on Amazon-only economics.
+
 ## 9. Content Requirements
 
 Every page must include:

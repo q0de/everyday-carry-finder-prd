@@ -31,6 +31,7 @@ The first validation goal is SEO traction and affiliate outbound click behavior,
 - [docs/profit-model-v1.md](./docs/profit-model-v1.md): rough affiliate revenue model and assumptions.
 - [docs/keyword-serp-validation-no-knife-tsa-edc.md](./docs/keyword-serp-validation-no-knife-tsa-edc.md): initial SERP validation for the TSA/no-knife subcluster.
 - [docs/hermes-review-and-v5-additions.md](./docs/hermes-review-and-v5-additions.md): reconciled MVP recommendation, v5 additions, build gates, sitemap draft, analytics spec, and 30-day/120-day criteria.
+- [docs/further-research-recommendations-2026-06-20.md](./docs/further-research-recommendations-2026-06-20.md): additional SERP/competitor/affiliate research, refined page priority, direct affiliate targets, and editorial differentiators.
 - [templates/product-seed-template.csv](./templates/product-seed-template.csv): starter product data sheet schema for candidate recommendations.
 - [REVIEW_PROMPT.md](./REVIEW_PROMPT.md): prompt to give another LLM for critique.
 
