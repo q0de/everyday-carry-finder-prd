@@ -1,5 +1,9 @@
 # Product Requirements Document: Everyday Carry Finder v4
 
+> Superseded by [PRD-v5-build-ready.md](./PRD-v5-build-ready.md).
+>
+> This v4 document is preserved as background. For build decisions, launch scope, page briefs, analytics, product data, compliance, and acceptance criteria, use the v5 build-ready PRD.
+
 Updated: June 20, 2026
 
 ## 1. Executive Summary
