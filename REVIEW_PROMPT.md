@@ -10,6 +10,7 @@ Please read:
 4. `docs/freshness-ops-addendum.md`
 5. `docs/profit-model-v1.md`
 6. `docs/keyword-serp-validation-no-knife-tsa-edc.md`
+7. `docs/hermes-review-and-v5-additions.md`
 
 ## Product Context
 

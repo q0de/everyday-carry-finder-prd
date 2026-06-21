@@ -30,8 +30,14 @@ The first validation goal is SEO traction and affiliate outbound click behavior,
 - [docs/freshness-ops-addendum.md](./docs/freshness-ops-addendum.md): daily/weekly update system, Tavily-like monitoring, product freshness requirements.
 - [docs/profit-model-v1.md](./docs/profit-model-v1.md): rough affiliate revenue model and assumptions.
 - [docs/keyword-serp-validation-no-knife-tsa-edc.md](./docs/keyword-serp-validation-no-knife-tsa-edc.md): initial SERP validation for the TSA/no-knife subcluster.
+- [docs/hermes-review-and-v5-additions.md](./docs/hermes-review-and-v5-additions.md): reconciled MVP recommendation, v5 additions, build gates, sitemap draft, analytics spec, and 30-day/120-day criteria.
+- [templates/product-seed-template.csv](./templates/product-seed-template.csv): starter product data sheet schema for candidate recommendations.
 - [REVIEW_PROMPT.md](./REVIEW_PROMPT.md): prompt to give another LLM for critique.
 
 ## Review Goal
 
 The next reviewer should evaluate whether this is a smart MVP wedge, what is missing from the PRD, what should be cut, and what should be validated before any real build.
+
+## Current Reconciliation Note
+
+There is a deliberate tension between the broader 10-page PRD and the no-knife/TSA validation doc. The latest recommendation is to treat the project as a **validation-first 6-page Phase A** before building the Carry Builder quiz or a larger content engine. See [docs/hermes-review-and-v5-additions.md](./docs/hermes-review-and-v5-additions.md).
