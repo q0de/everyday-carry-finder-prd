@@ -4,6 +4,8 @@ Updated: June 20, 2026
 
 Status: canonical build-ready PRD
 
+v5.1 note: this version folds in the improvement pass from June 20, 2026: sharper TSA/no-knife priority, conditional page six, direct-affiliate gates, stronger product-card differentiation, and a no-paid-ads rule.
+
 ## 1. Executive Summary
 
 Everyday Carry Finder is a practical recommendation site for people who want an everyday carry setup that fits their real life: budget, pocket space, work rules, travel needs, knife preference, and comfort level.
@@ -20,16 +22,16 @@ The product should not be positioned as a knife-first site, a tactical site, or 
 
 Build Phase A only.
 
-Phase A is a 6-page static SEO MVP:
+Phase A is a 6-page static SEO MVP, but build and validate it in priority order rather than treating every page equally:
 
-1. `/edc-checklist/` - Everyday Carry Checklist
-2. `/best-edc-gear-for-beginners/` - Best EDC Gear for Beginners
-3. `/best-edc-kit-under-100/` - Best EDC Kit Under $100
-4. `/tsa-friendly-edc-kit/` - TSA-Friendly EDC Kit
-5. `/best-keychain-edc/` - Best Keychain EDC
-6. `/best-edc-without-a-knife/` - Best EDC Without a Knife
+1. `/tsa-friendly-edc-kit/` - TSA-Friendly EDC Kit
+2. `/best-edc-without-a-knife/` - Best EDC Without a Knife
+3. `/edc-checklist/` - Everyday Carry Checklist
+4. `/best-edc-kit-under-100/` - Best EDC Kit Under $100
+5. `/best-edc-gear-for-beginners/` - Best EDC Gear for Beginners
+6. Conditional page six: `/best-keychain-edc-without-bulk/` or `/best-edc-kit-under-50/` after SERP validation
 
-Do not build the Carry Builder quiz, freshness automation, user accounts, or a custom product admin in Phase A.
+Do not build the Carry Builder quiz, freshness automation, user accounts, paid ads, sponsored placements, or a custom product admin in Phase A. Build the first two pages before the rest if time or budget is constrained.
 
 ## 3. Target Users
 
@@ -86,6 +88,7 @@ Phase A is successful if, within 120-180 days after publication, at least two ar
 - Tracked outbound product clicks occur from multiple pages.
 - One content cluster clearly outperforms the others.
 - Direct affiliate opportunities become realistic because the site has useful content and early traction.
+- At least two relevant direct affiliate programs are approved or clearly reachable after application.
 
 Pivot if:
 
@@ -107,6 +110,8 @@ Park the project if:
 
 Build six static pages, product data, affiliate disclosures, basic analytics, tracked outbound links, sitemap, and Search Console setup.
 
+Execution order matters: publish or draft the two sharpest constraint pages first (`/tsa-friendly-edc-kit/` and `/best-edc-without-a-knife/`) before filling out the broader beginner/checklist cluster.
+
 ### Phase B: Expansion Pages
 
 Add only after Phase A shows signal:
@@ -114,7 +119,6 @@ Add only after Phase A shows signal:
 - `/best-office-edc/`
 - `/best-travel-edc/`
 - `/best-minimalist-edc/`
-- `/best-edc-kit-under-50/`
 - `/pocket-edc-vs-pouch-edc/`
 
 ### Phase C: Carry Builder Quiz
@@ -167,7 +171,7 @@ Internal links out:
 - `/best-edc-gear-for-beginners/`
 - `/best-edc-kit-under-100/`
 - `/tsa-friendly-edc-kit/`
-- `/best-keychain-edc/`
+- conditional page six
 - `/best-edc-without-a-knife/`
 
 Publish criteria:
@@ -213,7 +217,7 @@ Internal links out:
 
 - `/edc-checklist/`
 - `/best-edc-kit-under-100/`
-- `/best-keychain-edc/`
+- conditional page six
 - `/best-edc-without-a-knife/`
 
 Publish criteria:
@@ -257,7 +261,7 @@ Internal links out:
 
 - `/edc-checklist/`
 - `/best-edc-gear-for-beginners/`
-- `/best-keychain-edc/`
+- conditional page six
 - `/best-edc-without-a-knife/`
 
 Publish criteria:
@@ -310,17 +314,23 @@ Publish criteria:
 - Uses conservative language: "TSA-friendly" does not mean guaranteed.
 - Does not rely on merchant "TSA-approved" claims without caution.
 
-### 7.5 `/best-keychain-edc/`
+### 7.5 Conditional page six: keychain or under-$50
 
-Page: Best Keychain EDC
+Default candidate: `/best-keychain-edc-without-bulk/`
+
+Fallback candidate: `/best-edc-kit-under-50/`
+
+Page: Best Keychain EDC Without Bulk or Best EDC Kit Under $50
 
 Role: buyer/category page
 
 Primary intent: commercial investigation
 
-Target reader: user who wants useful tools on keys without bulk.
+Target reader: user who wants useful low-cost carry without bulk.
 
-Differentiation angle: small, useful, low-bulk keychain carry organized by everyday jobs.
+Differentiation angle: small, useful, low-bulk recommendations organized by everyday jobs.
+
+Decision rule: build the keychain page only if SERP validation finds a clear gap around beginner-safe, no-bulk keychain carry. If keychain SERPs are too crowded or merchant-dominated, build the under-$50 budget page instead.
 
 Required sections:
 
@@ -418,7 +428,7 @@ Required fields:
 | Affiliate fit | Low, medium, high |
 | Decision | Build, reframe, defer, drop |
 
-Phase A cannot begin content production until all six rows are filled and at least four pages remain "build."
+Phase A cannot begin content production until all six rows are filled and at least four pages remain "build." Page six must be decided by this table, not by preference. Add a `SERP gap` note for each page such as: missing beginner framework, too knife-heavy, merchant-biased, lacks no-knife options, lacks pocket-burden guidance, outdated products, or no original testing.
 
 ## 9. Product Data Model
 
@@ -447,6 +457,15 @@ last_price_checked_at
 last_availability_checked_at
 recommendation_status
 notes
+pocket_burden
+constraint_badges
+direct_affiliate_priority
+merchant_risk
+brand_voice_fit
+approval_status
+skip_this_if
+first_buy_next_buy_skip
+why_it_earns_a_spot
 ```
 
 Allowed `tested_status` values:
@@ -454,6 +473,21 @@ Allowed `tested_status` values:
 - `tested`
 - `handled`
 - `researched`
+
+Allowed `pocket_burden` values:
+
+- `barely_noticeable`
+- `pocket_friendly`
+- `pocket_tax`
+- `better_in_pouch_or_bag`
+
+Allowed `approval_status` values:
+
+- `not_applied`
+- `applied`
+- `approved`
+- `rejected`
+- `unavailable`
 
 Allowed `recommendation_status` values:
 
@@ -481,6 +515,8 @@ Minimum before publishing:
 - At least 5 recommendations per Phase A page.
 - At least 3 personally tested or handled products.
 - Clear `tested`, `handled`, or `researched` label for every recommendation.
+- Pocket burden, constraint badges, "skip this if," and "why it earns a spot" filled for every published recommendation.
+- At least two relevant direct affiliate programs applied to or approved before publishing all six pages; Amazon can remain a fallback, not the whole business model.
 
 Product exclusion rules:
 
@@ -529,8 +565,11 @@ Product card requirements:
 - Price band.
 - Merchant.
 - Tested/handled/researched label.
+- Why it earns a spot.
+- Pocket burden.
+- Constraint badges.
 - Best for.
-- Avoid if.
+- Skip this if / avoid if.
 - Pros.
 - Cons.
 - Tracked outbound link.
@@ -541,6 +580,7 @@ Comparison table requirements:
 - Best for.
 - Price band.
 - Constraint fit.
+- Pocket burden.
 - Tested status.
 - Link or CTA.
 
@@ -555,6 +595,8 @@ Each Phase A page must have:
 - Last product verification date.
 - At least 5 product/category recommendations.
 - Clear tested/handled/researched labels.
+- Pocket burden and constraint badges on each recommendation.
+- "Skip this if" guidance on each recommendation.
 - At least 3 internal links.
 - Tracked outbound links.
 - Conservative legal, TSA, workplace, and knife language.
@@ -562,6 +604,7 @@ Each Phase A page must have:
 - Sitemap inclusion.
 - Search Console discoverability.
 - Schema plan where appropriate.
+- Direct affiliate tracking IDs or sub-IDs are unique enough to attribute clicks/revenue by page or cluster where the affiliate program allows it.
 
 Phase A MVP is complete only when:
 
@@ -604,6 +647,9 @@ position_on_page
 cta_label
 recommendation_context
 is_affiliate
+pocket_burden
+constraint_badges
+tested_status
 ```
 
 Example event:
@@ -657,6 +703,7 @@ Operational rules:
 
 - Do not display exact Amazon prices unless compliant with current Amazon Associates requirements and API usage.
 - Do not use Amazon product images unless compliant with current Amazon Associates requirements and approved API/feed usage.
+- Use unique affiliate tracking IDs, sub-IDs, or campaign parameters per page/funnel where available; never reuse one blended tag across unrelated experiments if attribution matters.
 - Do not make absolute TSA, legal, workplace, or school-policy claims.
 - Date-stamp product verification.
 - Remove or replace unavailable products.
@@ -701,7 +748,7 @@ Do not build these in Phase A:
 - Price scraping.
 - Automated freshness monitor.
 - Email capture funnel.
-- Paid ads.
+- Paid ads. Paid traffic is prohibited until at least 50 organic outbound product clicks have occurred and affiliate EPC is known.
 - Sponsored placements.
 - Full affiliate dashboard.
 
@@ -709,25 +756,27 @@ Do not build these in Phase A:
 
 ### Week 1: Validation And Data
 
-- Complete SERP validation table for all six Phase A pages.
-- Confirm final Phase A page list.
+- Complete SERP validation table for all six Phase A pages, including explicit SERP gap notes.
+- Confirm final Phase A page list and choose page six: keychain-without-bulk or under-$50.
 - Fill product seed sheet with at least 35 candidates.
-- Check Amazon/direct affiliate eligibility.
+- Apply to or verify direct affiliate programs for Bellroy, Lever Gear, Olight, Huckberry, and CountyComm where relevant.
+- Check Amazon/direct affiliate eligibility and unique tracking/sub-ID support.
 - Choose analytics and outbound tracking approach.
 - Approve page template.
 - Approve disclosure blocks.
 
 ### Week 2: First Hub And Buyer Page
 
-- Draft `/edc-checklist/`.
-- Draft either `/best-edc-gear-for-beginners/` or `/tsa-friendly-edc-kit/`, depending on validation.
+- Draft `/tsa-friendly-edc-kit/`.
+- Draft `/best-edc-without-a-knife/`.
+- Add the short-version block, pocket burden labels, constraint badges, and skip-this-if guidance.
 - Add internal links and product cards.
 - Add analytics and tracked outbound links.
 - QA disclosures and metadata.
 
 ### Week 3: Remaining Phase A Pages
 
-- Draft remaining approved Phase A pages.
+- Draft `/edc-checklist/` and `/best-edc-kit-under-100/`, then remaining approved Phase A pages only if the first two pages pass QA.
 - Apply consistent product-card format.
 - Add schema where appropriate.
 - Add related links.
@@ -742,7 +791,19 @@ Do not build these in Phase A:
 - Start manual weekly review log.
 - Decide first post-launch review date.
 
-## 17. Appendices
+## 17. v5.1 Improvement Rules
+
+These rules are mandatory unless a later PRD version explicitly replaces them.
+
+1. **Build order:** TSA-friendly and no-knife pages come first because they are the sharpest differentiated wedge.
+2. **Conditional page six:** keychain EDC is not guaranteed. Choose keychain-without-bulk only if SERP validation shows a clear gap; otherwise use the under-$50 budget page.
+3. **Direct affiliates:** do not rely on Amazon-only economics. Apply to or track Bellroy, Lever Gear, Olight, Huckberry, and CountyComm before the full six-page push.
+4. **Editorial differentiation:** every product card needs pocket burden, constraint badges, why-it-earns-a-spot, and skip-this-if guidance.
+5. **No paid ads:** no paid traffic until at least 50 organic outbound product clicks occur and affiliate EPC is known.
+6. **Sharper park rule:** park the project if, after 120-180 days, fewer than three pages get repeat GSC impressions, impressions exist but outbound clicks are near zero, or direct affiliate programs fail and Amazon-only EPC is weak.
+7. **Low-priority business lane:** treat this as a cheap SEO/content asset experiment, not a primary cash engine, unless early GSC and outbound-click data beat expectations.
+
+## 18. Appendices
 
 Supporting docs:
 
@@ -754,4 +815,4 @@ Supporting docs:
 - `docs/prd-gap-review.md` - prior v4 gap review.
 - `templates/product-seed-template.csv` - starter product data schema.
 
-If any appendix conflicts with this PRD, this PRD wins.
+If any appendix conflicts with this PRD, this PRD wins. If the further-research PR conflicts with this file, manually reconcile only the parts that strengthen the v5.1 rules above.
