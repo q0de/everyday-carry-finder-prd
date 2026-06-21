@@ -20,12 +20,12 @@ The product should not be a knife-first EDC site or a no-knife-only site. The cu
 
 Launch a small static test instead of building the full system:
 
-1. `/edc-checklist/` - Everyday Carry Checklist
-2. `/best-edc-gear-for-beginners/` - Best EDC Gear for Beginners
-3. `/best-edc-kit-under-100/` - Best EDC Kit Under $100
-4. `/tsa-friendly-edc-kit/` - TSA-Friendly EDC Kit
-5. `/best-keychain-edc/` - Best Keychain EDC
-6. `/best-edc-without-a-knife/` - Best EDC Without a Knife
+1. `/tsa-friendly-edc-kit/` - TSA-Friendly EDC Kit
+2. `/best-edc-without-a-knife/` - Best EDC Without a Knife
+3. `/edc-checklist/` - Everyday Carry Checklist
+4. `/best-edc-kit-under-100/` - Best EDC Kit Under $100
+5. `/best-edc-gear-for-beginners/` - Best EDC Gear for Beginners
+6. Conditional page six: `/best-keychain-edc-without-bulk/` or `/best-edc-kit-under-50/` after SERP validation
 
 The first validation goal is SEO traction and affiliate outbound click behavior, not immediate profit.
 
@@ -40,6 +40,7 @@ The Carry Builder quiz is a Phase C conversion layer, not part of the MVP build.
 - [docs/freshness-ops-addendum.md](./docs/freshness-ops-addendum.md): daily/weekly update system, Tavily-like monitoring, product freshness requirements.
 - [docs/profit-model-v1.md](./docs/profit-model-v1.md): rough affiliate revenue model and assumptions.
 - [docs/keyword-serp-validation-no-knife-tsa-edc.md](./docs/keyword-serp-validation-no-knife-tsa-edc.md): initial SERP validation for the TSA/no-knife subcluster.
+- [docs/phase-a-serp-validation.md](./docs/phase-a-serp-validation.md): canonical Phase A validation worksheet for the current six-page MVP.
 - [docs/hermes-review-and-v5-additions.md](./docs/hermes-review-and-v5-additions.md): reconciled MVP recommendation, v5 additions, build gates, sitemap draft, analytics spec, and 30-day/120-day criteria.
 - [docs/prd-v5-improvement-rating-2026-06-20.md](./docs/prd-v5-improvement-rating-2026-06-20.md): v5 improvement/rating note and business-priority caution.
 - [templates/product-seed-template.csv](./templates/product-seed-template.csv): starter product data sheet schema for candidate recommendations.

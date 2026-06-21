@@ -305,7 +305,7 @@ Internal links out:
 
 - `/edc-checklist/`
 - `/best-edc-without-a-knife/`
-- `/best-keychain-edc/`
+- conditional page six
 
 Publish criteria:
 
@@ -398,7 +398,7 @@ Internal links out:
 
 - `/edc-checklist/`
 - `/tsa-friendly-edc-kit/`
-- `/best-keychain-edc/`
+- conditional page six
 - `/best-edc-gear-for-beginners/`
 
 Publish criteria:
