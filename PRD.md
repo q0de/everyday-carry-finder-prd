@@ -195,6 +195,29 @@ Drop or defer a page if:
 
 The existing no-knife/TSA validation remains useful, but it should be treated as validation for two launch pages and one sub-cluster, not the whole launch plan.
 
+## 8A. v5 Reconciliation Addendum
+
+The repo now contains three partially conflicting launch shapes:
+
+- the broad 10-page v4 launch list in this PRD;
+- the narrower no-knife/TSA cluster validated in `docs/keyword-serp-validation-no-knife-tsa-edc.md`;
+- the quiz-forward wedge described in `README.md`.
+
+Before build, v5 should reconcile these into a validation-first Phase A.
+
+Recommended Phase A launch set:
+
+1. `/edc-checklist/` — Everyday Carry Checklist
+2. `/best-edc-gear-for-beginners/` — Best EDC Gear for Beginners
+3. `/best-edc-kit-under-100/` — Best EDC Kit Under $100
+4. `/tsa-friendly-edc-kit/` — TSA-Friendly EDC Kit
+5. `/best-keychain-edc/` — Best Keychain EDC
+6. `/best-edc-without-a-knife/` — Best EDC Without a Knife
+
+The Carry Builder quiz should be a later conversion layer, not a launch dependency. Do not build it until the static pages produce indexing, impressions, or tracked outbound-click evidence.
+
+See `docs/hermes-review-and-v5-additions.md` for build gates, launch sitemap draft, analytics event spec, compliance blocks, and 30-day/120-day criteria.
+
 ## 9. Content Requirements
 
 Every page must include:
