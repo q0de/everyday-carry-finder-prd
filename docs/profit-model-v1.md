@@ -1,6 +1,6 @@
 # Everyday Carry Finder Profit Model v1
 
-Updated: June 20, 2026
+Updated: June 21, 2026
 
 ## Short Answer
 
@@ -27,6 +27,7 @@ Important Amazon notes:
 - Amazon's public Associates page says publishers can earn "up to 10%" in associate commissions.
 - Amazon's 24-hour session window applies after a customer clicks an Associates link, with a longer cart exception if the item is added during that window.
 - Amazon payments are typically made about 60 days after the end of the earned month if payment thresholds and tax info are satisfied.
+- Amazon Associates can close an account if it does not generate the required qualifying sales within the initial approval window; do not start that clock before the site can plausibly drive purchases.
 
 Sources:
 
@@ -64,11 +65,13 @@ Estimated blended commission rate:
 
 Estimated commission per purchase:
 
-| Scenario | AOV | Commission Rate | Earnings Per Purchase |
-|---|---:|---:|---:|
-| Conservative | $35 | 2.5% | $0.88 |
-| Base | $55 | 3.5% | $1.93 |
-| Upside | $85 | 6.0% | $5.10 |
+| Scenario | AOV | Commission Rate | Cookie Duration | Earnings Per Purchase |
+|---|---:|---:|---:|---:|
+| Conservative | $35 | 2.5% | 24 hours | $0.88 |
+| Base | $55 | 3.5% | 24 hours to 7 days | $1.93 |
+| Upside | $85 | 6.0% | 14-30 days | $5.10 |
+
+Direct-affiliate upside is not just higher commission rate; longer cookie windows can materially improve realized EPC. Example: a $60 wallet at 8% commission with a 30-day direct-program cookie can be worth $4.80 per purchase versus $1.80 at a 3% Amazon-like rate with a 24-hour window. Program research should capture commission rate, cookie duration, network, approval requirements, and traffic/sales thresholds before application. Conservative assumes Amazon-heavy economics; upside assumes direct-program approval and longer-cookie economics.
 
 ## Traffic And Conversion Model
 
@@ -135,14 +138,14 @@ The upside exists, but only if the site becomes a real content asset with winnin
 |---|---|---:|---:|---|
 | Everyday Carry Checklist | Hub/trust | Medium | Medium | Broad traffic, many internal links |
 | Best EDC Gear for Beginners | Buyer/trust | High | High | Strong recommendation fit |
-| Best EDC Kit Under $50 | Buyer | High | Medium | Lower AOV, high budget intent |
 | Best EDC Kit Under $100 | Buyer | High | High | Better AOV and useful products |
+| Best EDC Kit Under $50 | Conditional buyer page | High | Medium | Lower AOV; build only if chosen over keychain page |
 | TSA-Friendly EDC Kit | Constraint buyer | High | High | Strong fit for pouches, pens, lights, chargers |
 | Best EDC Without a Knife | Constraint buyer | Medium-high | Medium-high | Good gap page, not whole brand |
 | Best Office EDC | Lifestyle buyer | Medium-high | Medium-high | Wallets, pens, bags, slim tools |
 | Best Travel EDC | Buyer | High | High | Travel gear and pouches can lift AOV |
 | Best Minimalist EDC | Buyer/trust | Medium | Medium | Competitive, but good internal value |
-| Best Keychain EDC | Buyer | High | Medium | Lower AOV but strong product fit |
+| Best Keychain EDC Without Bulk | Conditional buyer page | High | Medium | Lower AOV but strong product fit; build only if SERP validation beats under-$50 page |
 
 ## Costs
 
