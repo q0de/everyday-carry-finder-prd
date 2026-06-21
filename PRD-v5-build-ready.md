@@ -430,7 +430,7 @@ Required fields:
 
 Phase A cannot begin content production until all six rows are filled and at least four pages remain "build." Page six must be decided by this table, not by preference. Add a `SERP gap` note for each page such as: missing beginner framework, too knife-heavy, merchant-biased, lacks no-knife options, lacks pocket-burden guidance, outdated products, or no original testing.
 
-Important status note: `docs/keyword-serp-validation-no-knife-tsa-edc.md` validates the initial TSA/no-knife subcluster only. It does not validate the broader Phase A pages (`/edc-checklist/`, `/best-edc-gear-for-beginners/`, `/best-edc-kit-under-100/`) or the conditional sixth page. Those broader rows must be completed before drafting those pages. Track readiness in `docs/phase-a-readiness-status.md`.
+Important status note: `docs/phase-a-serp-validation.md` is the current worksheet for all six Phase A pages, but it is still a working validation artifact. `docs/keyword-serp-validation-no-knife-tsa-edc.md` validates the initial TSA/no-knife subcluster only and should not be treated as validation for broad pages. Before drafting each page, refresh the live top-5 SERP row and track readiness in `docs/phase-a-readiness-status.md`.
 
 ## 9. Product Data Model
 
@@ -855,7 +855,8 @@ These rules are mandatory unless a later PRD version explicitly replaces them.
 Supporting docs:
 
 - `docs/hermes-review-and-v5-additions.md` - v5 rationale, build gates, and decision criteria. Appendix only; any conflicting page order or URL names are superseded by this PRD.
-- `docs/keyword-serp-validation-no-knife-tsa-edc.md` - initial validation for the TSA/no-knife wedge only; not sufficient for broad Phase A pages.
+- `docs/phase-a-serp-validation.md` - current Phase A validation worksheet; refresh live SERPs before drafting.
+- `docs/keyword-serp-validation-no-knife-tsa-edc.md` - historical initial validation for the TSA/no-knife wedge only; not sufficient for broad Phase A pages.
 - `docs/profit-model-v1.md` - directional revenue model and economics.
 - `docs/quiz-experience-addendum.md` - Phase C quiz UX guidance.
 - `docs/freshness-ops-addendum.md` - future freshness and monitoring system.

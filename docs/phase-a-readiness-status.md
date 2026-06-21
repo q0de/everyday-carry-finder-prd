@@ -6,11 +6,12 @@ This file prevents the schema/template work from being mistaken for product-sour
 
 ## Current Status
 
-- SERP validation: **partial**
-  - Completed: initial TSA/no-knife subcluster validation only.
-  - Missing: broad Phase A rows for `/edc-checklist/`, `/best-edc-gear-for-beginners/`, `/best-edc-kit-under-100/`, and the conditional page-six choice.
+- SERP validation: **worksheet exists, live checks still required**
+  - Current worksheet: `docs/phase-a-serp-validation.md`.
+  - Historical support: initial TSA/no-knife subcluster validation.
+  - Missing before drafting: fresh live top-5 SERP capture for each page, plus final conditional page-six decision.
 - Product sourcing: **0/35 real candidate products sourced**
-  - `templates/product-seed-template.csv` is a schema/example starter, not an inventory sheet.
+  - `templates/product-seed-template.csv` contains example rows to demonstrate the schema; those examples are not approved inventory.
 - Direct affiliate research: **not complete**
   - Need network, commission, cookie window, approval requirements, and traffic thresholds for each target program before application.
 - Amazon Associates readiness: **defer signup unless 3-sale requirement can be met**

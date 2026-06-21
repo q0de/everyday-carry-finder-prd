@@ -40,6 +40,7 @@ The Carry Builder quiz is a Phase C conversion layer, not part of the MVP build.
 - [docs/freshness-ops-addendum.md](./docs/freshness-ops-addendum.md): daily/weekly update system, Tavily-like monitoring, product freshness requirements.
 - [docs/profit-model-v1.md](./docs/profit-model-v1.md): rough affiliate revenue model and assumptions.
 - [docs/keyword-serp-validation-no-knife-tsa-edc.md](./docs/keyword-serp-validation-no-knife-tsa-edc.md): initial SERP validation for the TSA/no-knife subcluster.
+- [docs/phase-a-serp-validation.md](./docs/phase-a-serp-validation.md): canonical Phase A validation worksheet for the current six-page MVP.
 - [docs/hermes-review-and-v5-additions.md](./docs/hermes-review-and-v5-additions.md): reconciled MVP recommendation, v5 additions, build gates, sitemap draft, analytics spec, and 30-day/120-day criteria.
 - [docs/prd-v5-improvement-rating-2026-06-20.md](./docs/prd-v5-improvement-rating-2026-06-20.md): v5 improvement/rating note and business-priority caution.
 - [docs/phase-a-readiness-status.md](./docs/phase-a-readiness-status.md): current readiness gates; makes explicit that product sourcing is not complete yet.
