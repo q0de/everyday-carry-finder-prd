@@ -43,7 +43,8 @@ The Carry Builder quiz is a Phase C conversion layer, not part of the MVP build.
 - [docs/phase-a-serp-validation.md](./docs/phase-a-serp-validation.md): canonical Phase A validation worksheet for the current six-page MVP.
 - [docs/hermes-review-and-v5-additions.md](./docs/hermes-review-and-v5-additions.md): reconciled MVP recommendation, v5 additions, build gates, sitemap draft, analytics spec, and 30-day/120-day criteria.
 - [docs/prd-v5-improvement-rating-2026-06-20.md](./docs/prd-v5-improvement-rating-2026-06-20.md): v5 improvement/rating note and business-priority caution.
-- [templates/product-seed-template.csv](./templates/product-seed-template.csv): starter product data sheet schema for candidate recommendations.
+- [docs/phase-a-readiness-status.md](./docs/phase-a-readiness-status.md): current readiness gates; makes explicit that product sourcing is not complete yet.
+- [templates/product-seed-template.csv](./templates/product-seed-template.csv): starter product data sheet schema/example rows for candidate recommendations; not completed inventory.
 - [REVIEW_PROMPT.md](./REVIEW_PROMPT.md): prompt to give another LLM for critique.
 
 ## Review Goal

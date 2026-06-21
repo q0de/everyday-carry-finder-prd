@@ -1,6 +1,6 @@
 # Everyday Carry Finder PRD v5
 
-Updated: June 20, 2026
+Updated: June 21, 2026
 
 Status: canonical build-ready PRD
 
@@ -171,7 +171,7 @@ Internal links out:
 - `/best-edc-gear-for-beginners/`
 - `/best-edc-kit-under-100/`
 - `/tsa-friendly-edc-kit/`
-- conditional page six
+- conditional page six (`/best-keychain-edc-without-bulk/` or `/best-edc-kit-under-50/`)
 - `/best-edc-without-a-knife/`
 
 Publish criteria:
@@ -217,7 +217,7 @@ Internal links out:
 
 - `/edc-checklist/`
 - `/best-edc-kit-under-100/`
-- conditional page six
+- conditional page six (`/best-keychain-edc-without-bulk/` or `/best-edc-kit-under-50/`)
 - `/best-edc-without-a-knife/`
 
 Publish criteria:
@@ -261,7 +261,7 @@ Internal links out:
 
 - `/edc-checklist/`
 - `/best-edc-gear-for-beginners/`
-- conditional page six
+- conditional page six (`/best-keychain-edc-without-bulk/` or `/best-edc-kit-under-50/`)
 - `/best-edc-without-a-knife/`
 
 Publish criteria:
@@ -305,7 +305,7 @@ Internal links out:
 
 - `/edc-checklist/`
 - `/best-edc-without-a-knife/`
-- conditional page six
+- conditional page six (`/best-keychain-edc-without-bulk/` or `/best-edc-kit-under-50/`)
 
 Publish criteria:
 
@@ -398,7 +398,7 @@ Internal links out:
 
 - `/edc-checklist/`
 - `/tsa-friendly-edc-kit/`
-- conditional page six
+- conditional page six (`/best-keychain-edc-without-bulk/` or `/best-edc-kit-under-50/`)
 - `/best-edc-gear-for-beginners/`
 
 Publish criteria:
@@ -430,11 +430,35 @@ Required fields:
 
 Phase A cannot begin content production until all six rows are filled and at least four pages remain "build." Page six must be decided by this table, not by preference. Add a `SERP gap` note for each page such as: missing beginner framework, too knife-heavy, merchant-biased, lacks no-knife options, lacks pocket-burden guidance, outdated products, or no original testing.
 
+Important status note: `docs/phase-a-serp-validation.md` is the current worksheet for all six Phase A pages, but it is still a working validation artifact. `docs/keyword-serp-validation-no-knife-tsa-edc.md` validates the initial TSA/no-knife subcluster only and should not be treated as validation for broad pages. Before drafting each page, refresh the live top-5 SERP row and track readiness in `docs/phase-a-readiness-status.md`.
+
 ## 9. Product Data Model
 
 Phase A may use a CSV, spreadsheet, Airtable, or JSON file. Do not build a custom admin in Phase A.
 
-Required fields:
+Required fields are split by workflow stage so the seed sheet is usable instead of intimidating.
+
+Seed-stage required fields, before a product can count toward the 35-candidate gate:
+
+```text
+product_id
+product_name
+brand
+category
+price_band
+merchant
+affiliate_program
+affiliate_url
+canonical_url
+launch_page_fit
+tags
+tested_status
+best_for
+avoid_if
+recommendation_status
+```
+
+Pre-publish required fields, before a recommendation can appear on a live page:
 
 ```text
 product_id
@@ -511,12 +535,14 @@ Minimum Phase A product seed:
 
 Minimum before publishing:
 
-- At least 35 candidate products.
+- At least 35 real candidate products, not schema placeholder rows.
 - At least 5 recommendations per Phase A page.
-- At least 3 personally tested or handled products.
+- At least 8 personally tested or handled products across at least 3 categories.
+- At least 1 tested or handled product on every published page.
 - Clear `tested`, `handled`, or `researched` label for every recommendation.
 - Pocket burden, constraint badges, "skip this if," and "why it earns a spot" filled for every published recommendation.
 - At least two relevant direct affiliate programs applied to or approved before publishing all six pages; Amazon can remain a fallback, not the whole business model.
+- Direct affiliate program research must document network, commission rate, cookie duration, approval requirements, traffic/sales thresholds, and rejection/reapply path.
 
 Product exclusion rules:
 
@@ -573,6 +599,13 @@ Product card requirements:
 - Pros.
 - Cons.
 - Tracked outbound link.
+
+Image requirements:
+
+- Each product card should have an image or an explicit "image pending" placeholder before publication.
+- Use original photos for tested or handled products where feasible.
+- For researched products, use brand-provided press images only when permission/license is clear, or link users to merchant pages instead.
+- Do not scrape, hotlink, or manually reuse Amazon product images unless compliant with current Amazon Associates/PA-API requirements.
 
 Comparison table requirements:
 
@@ -707,6 +740,9 @@ Operational rules:
 - Do not make absolute TSA, legal, workplace, or school-policy claims.
 - Date-stamp product verification.
 - Remove or replace unavailable products.
+- Define evidence labels strictly: `tested` means the author personally used the product; `handled` means the author physically examined it; `researched` means the recommendation is based on published reviews, specs, merchant details, and community feedback. Do not blur these labels.
+- Re-verify TSA source pages before any product update on TSA-sensitive pages. Add `last_tsa_verified_at` to page-level metadata for TSA/travel pages.
+- Do not apply for Amazon Associates until at least one page is indexed and receiving organic traffic, or there is a credible plan to meet Amazon's 3 qualifying-sale requirement within 180 days.
 
 ## 14. Technical Scope
 
@@ -721,7 +757,8 @@ Recommended Phase A stack:
 - Basic analytics.
 - Google Search Console.
 - XML sitemap.
-- Robots.txt.
+- Robots.txt with staging/private routes blocked if applicable and public SEO pages crawlable.
+- Canonical URL policy for every published page.
 - Basic schema where appropriate.
 - Tracked outbound links through analytics events or lightweight redirect tracking.
 
@@ -752,20 +789,30 @@ Do not build these in Phase A:
 - Sponsored placements.
 - Full affiliate dashboard.
 
-## 16. 30-Day Execution Plan
+## 16. Execution Plan
 
-### Week 1: Validation And Data
+The timeline below assumes focused execution. If this is a side project, treat it as a 6-8 week plan or "30 working days," not four calendar weeks. Do not compress validation gates just to preserve the timeline.
+
+### 16.1 Readiness Gate Before Week 1
+
+- Confirm `docs/phase-a-readiness-status.md` shows no blocker for the pages being drafted.
+- Confirm the product seed sheet contains real candidates, not only schema examples.
+- Confirm the broad Phase A SERP rows exist; the initial TSA/no-knife validation doc is not enough for broad pages.
+
+### 16.2 30-Working-Day Execution Plan
+
+#### Week 1: Validation And Data
 
 - Complete SERP validation table for all six Phase A pages, including explicit SERP gap notes.
 - Confirm final Phase A page list and choose page six: keychain-without-bulk or under-$50.
 - Fill product seed sheet with at least 35 candidates.
-- Apply to or verify direct affiliate programs for Bellroy, Lever Gear, Olight, Huckberry, and CountyComm where relevant.
-- Check Amazon/direct affiliate eligibility and unique tracking/sub-ID support.
+- Research direct affiliate programs for Bellroy, Lever Gear, Olight, Huckberry, and CountyComm where relevant: network, commission rate, cookie duration, approval requirements, traffic/sales thresholds, and reapply path. Apply only where the site is credible enough not to waste an approval window.
+- Check Amazon/direct affiliate eligibility, Amazon 3-sale/180-day timing risk, cookie duration, and unique tracking/sub-ID support.
 - Choose analytics and outbound tracking approach.
 - Approve page template.
 - Approve disclosure blocks.
 
-### Week 2: First Hub And Buyer Page
+#### Week 2: First Hub And Buyer Page
 
 - Draft `/tsa-friendly-edc-kit/`.
 - Draft `/best-edc-without-a-knife/`.
@@ -774,7 +821,7 @@ Do not build these in Phase A:
 - Add analytics and tracked outbound links.
 - QA disclosures and metadata.
 
-### Week 3: Remaining Phase A Pages
+#### Week 3: Remaining Phase A Pages
 
 - Draft `/edc-checklist/` and `/best-edc-kit-under-100/`, then remaining approved Phase A pages only if the first two pages pass QA.
 - Apply consistent product-card format.
@@ -782,7 +829,7 @@ Do not build these in Phase A:
 - Add related links.
 - QA all affiliate and canonical URLs.
 
-### Week 4: Publish And Measure
+#### Week 4: Publish And Measure
 
 - Publish Phase A pages.
 - Submit sitemap in Google Search Console.
@@ -797,7 +844,7 @@ These rules are mandatory unless a later PRD version explicitly replaces them.
 
 1. **Build order:** TSA-friendly and no-knife pages come first because they are the sharpest differentiated wedge.
 2. **Conditional page six:** keychain EDC is not guaranteed. Choose keychain-without-bulk only if SERP validation shows a clear gap; otherwise use the under-$50 budget page.
-3. **Direct affiliates:** do not rely on Amazon-only economics. Apply to or track Bellroy, Lever Gear, Olight, Huckberry, and CountyComm before the full six-page push.
+3. **Direct affiliates:** do not rely on Amazon-only economics. Research and document target program network, commission, cookie duration, approval requirements, and traffic thresholds before applying. If fewer than two direct programs are approved or clearly approvable by Week 3, proceed with Amazon-only economics as the fallback and set reapply milestones.
 4. **Editorial differentiation:** every product card needs pocket burden, constraint badges, why-it-earns-a-spot, and skip-this-if guidance.
 5. **No paid ads:** no paid traffic until at least 50 organic outbound product clicks occur and affiliate EPC is known.
 6. **Sharper park rule:** park the project if, after 120-180 days, fewer than three pages get repeat GSC impressions, impressions exist but outbound clicks are near zero, or direct affiliate programs fail and Amazon-only EPC is weak.
@@ -807,12 +854,14 @@ These rules are mandatory unless a later PRD version explicitly replaces them.
 
 Supporting docs:
 
-- `docs/hermes-review-and-v5-additions.md` - v5 rationale, build gates, and decision criteria.
-- `docs/keyword-serp-validation-no-knife-tsa-edc.md` - initial validation for the TSA/no-knife wedge.
+- `docs/hermes-review-and-v5-additions.md` - v5 rationale, build gates, and decision criteria. Appendix only; any conflicting page order or URL names are superseded by this PRD.
+- `docs/phase-a-serp-validation.md` - current Phase A validation worksheet; refresh live SERPs before drafting.
+- `docs/keyword-serp-validation-no-knife-tsa-edc.md` - historical initial validation for the TSA/no-knife wedge only; not sufficient for broad Phase A pages.
 - `docs/profit-model-v1.md` - directional revenue model and economics.
 - `docs/quiz-experience-addendum.md` - Phase C quiz UX guidance.
 - `docs/freshness-ops-addendum.md` - future freshness and monitoring system.
 - `docs/prd-gap-review.md` - prior v4 gap review.
-- `templates/product-seed-template.csv` - starter product data schema.
+- `docs/phase-a-readiness-status.md` - live readiness/status checklist for Phase A gates.
+- `templates/product-seed-template.csv` - starter product data schema/example rows, not completed product inventory.
 
 If any appendix conflicts with this PRD, this PRD wins. If the further-research PR conflicts with this file, manually reconcile only the parts that strengthen the v5.1 rules above.
