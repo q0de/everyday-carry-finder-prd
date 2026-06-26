@@ -10,6 +10,10 @@ This file prevents the schema/template work from being mistaken for product-sour
   - Current worksheet: `docs/phase-a-serp-validation.md`.
   - Historical support: initial TSA/no-knife subcluster validation.
   - Missing before drafting: fresh live top-5 SERP capture for each page, plus final conditional page-six decision.
+- Social intent / ROI validation: **worksheet exists, research not complete**
+  - Current worksheet: `docs/social-intent-roi-validation.md`.
+  - Missing before drafting: fill platform findings for TikTok, YouTube, Instagram/Reels, Meta Ads Library, Reddit/X, and Pinterest.
+  - Meta Ads Library results must be filtered for irrelevant ad-library junk before influencing page or product decisions.
 - Product sourcing: **0/35 real candidate products sourced**
   - `templates/product-seed-template.csv` contains example rows to demonstrate the schema; those examples are not approved inventory.
 - Direct affiliate research: **not complete**
@@ -21,4 +25,4 @@ This file prevents the schema/template work from being mistaken for product-sour
 
 ## Build Gate
 
-Do not draft or publish a Phase A page until its SERP row, product candidates, affiliate/disclosure plan, and product-card requirements are complete.
+Do not draft or publish a Phase A page until its SERP row, social-intent/ROI validation, product candidates, affiliate/disclosure plan, and product-card requirements are complete.

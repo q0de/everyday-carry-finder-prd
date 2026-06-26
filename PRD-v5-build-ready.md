@@ -4,7 +4,7 @@ Updated: June 21, 2026
 
 Status: canonical build-ready PRD
 
-v5.1 note: this version folds in the improvement pass from June 20, 2026: sharper TSA/no-knife priority, conditional page six, direct-affiliate gates, stronger product-card differentiation, and a no-paid-ads rule.
+v5.2 note: this version folds in the improvement pass from June 20, 2026 plus social-intent/ROI validation: sharper TSA/no-knife priority, conditional page six, direct-affiliate gates, stronger product-card differentiation, a no-paid-ads rule, and a required pre-build check across TikTok, YouTube, Instagram, Meta ads, Reddit/X, and Pinterest.
 
 ## 1. Executive Summary
 
@@ -407,7 +407,7 @@ Publish criteria:
 - Does not claim universal legality or workplace safety.
 - Explains useful alternatives to cutting tools.
 
-## 8. Keyword And SERP Validation
+## 8. Keyword/SERP And Social Intent Validation
 
 No page should be drafted until its keyword/SERP row is completed.
 
@@ -431,6 +431,43 @@ Required fields:
 Phase A cannot begin content production until all six rows are filled and at least four pages remain "build." Page six must be decided by this table, not by preference. Add a `SERP gap` note for each page such as: missing beginner framework, too knife-heavy, merchant-biased, lacks no-knife options, lacks pocket-burden guidance, outdated products, or no original testing.
 
 Important status note: `docs/phase-a-serp-validation.md` is the current worksheet for all six Phase A pages, but it is still a working validation artifact. `docs/keyword-serp-validation-no-knife-tsa-edc.md` validates the initial TSA/no-knife subcluster only and should not be treated as validation for broad pages. Before drafting each page, refresh the live top-5 SERP row and track readiness in `docs/phase-a-readiness-status.md`.
+
+### 8.1 Social Intent + ROI Validation
+
+Before drafting Phase A pages, complete `docs/social-intent-roi-validation.md`.
+
+The goal is to validate whether EDC demand is only search-driven, or whether it also has social pull, creator energy, buyer intent, and paid-ad proof.
+
+Required platforms:
+
+- TikTok.
+- YouTube and YouTube Shorts.
+- Instagram/Reels.
+- Meta Ads Library.
+- Reddit and X/Twitter.
+- Pinterest.
+
+Required questions:
+
+- Which EDC angles create saves, comments, shares, or buying questions?
+- Does the strongest intent come from generic EDC, TSA/no-knife, role/persona EDC, budget kits, keychain setups, pouches/slings, or office/travel bags?
+- Are users responding to gear flexing, practical readiness, aesthetic flat-lays, preparedness, or direct shopping?
+- Which products repeatedly appear in high-intent content?
+- Which brands are actively advertising, and do their ads show longevity?
+- Does "prepared without overpacking" hold up as a cross-platform positioning angle?
+
+Decision rule:
+
+If social research supports "prepared without overpacking," the Phase A editorial angle should emphasize organized readiness: useful things in the right place before work, travel, errands, or small daily problems. If social research instead points to another stronger driver, update the page briefs before drafting.
+
+Known early signals to verify:
+
+- TikTok: `#edc` is polluted by Electric Daisy Carnival; use `#everydaycarry`, `#pocketdump`, `#edcgear`, `#whatsinmybag`, and `#dailycarry`.
+- TikTok opportunity: EDC by persona and situation, such as software engineer EDC, dad EDC, commuter EDC, TSA-safe travel pouch, and office-safe no-knife kit.
+- Instagram: demos and "what I carry and why"; practical first, aesthetic second.
+- Pinterest: flat-lays, checklists, and saveable prepared-lifestyle systems.
+- Reddit: strongest buyer-language source; recurring pain around beginner confusion, TSA/no-knife, budget kits, keychain tools, carry method, and office/travel bag overlap.
+- Meta Ads Library: useful for brand/ad longevity, but noisy enough that irrelevant results must be filtered before influencing recommendations.
 
 ## 9. Product Data Model
 
@@ -798,12 +835,14 @@ The timeline below assumes focused execution. If this is a side project, treat i
 - Confirm `docs/phase-a-readiness-status.md` shows no blocker for the pages being drafted.
 - Confirm the product seed sheet contains real candidates, not only schema examples.
 - Confirm the broad Phase A SERP rows exist; the initial TSA/no-knife validation doc is not enough for broad pages.
+- Confirm social-intent/ROI validation has been completed or explicitly marked as a blocker.
 
 ### 16.2 30-Working-Day Execution Plan
 
 #### Week 1: Validation And Data
 
 - Complete SERP validation table for all six Phase A pages, including explicit SERP gap notes.
+- Complete social-intent/ROI validation across TikTok, YouTube, Instagram/Reels, Meta Ads Library, Reddit/X, and Pinterest.
 - Confirm final Phase A page list and choose page six: keychain-without-bulk or under-$50.
 - Fill product seed sheet with at least 35 candidates.
 - Research direct affiliate programs for Bellroy, Lever Gear, Olight, Huckberry, and CountyComm where relevant: network, commission rate, cookie duration, approval requirements, traffic/sales thresholds, and reapply path. Apply only where the site is credible enough not to waste an approval window.
@@ -862,6 +901,7 @@ Supporting docs:
 - `docs/freshness-ops-addendum.md` - future freshness and monitoring system.
 - `docs/prd-gap-review.md` - prior v4 gap review.
 - `docs/phase-a-readiness-status.md` - live readiness/status checklist for Phase A gates.
+- `docs/social-intent-roi-validation.md` - required worksheet for social demand, creative angle, buyer language, ad-longevity, and ROI signals.
 - `templates/product-seed-template.csv` - starter product data schema/example rows, not completed product inventory.
 
 If any appendix conflicts with this PRD, this PRD wins. If the further-research PR conflicts with this file, manually reconcile only the parts that strengthen the v5.1 rules above.
